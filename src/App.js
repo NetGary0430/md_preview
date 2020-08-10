@@ -1,16 +1,15 @@
-import React from 'react';
-import './App.css';
-import ControlledInput from './ControlledInput';
+import React from "react";
+import "./App.css";
+import ControlledInput from "./ControlledInput";
+import ReactFCCtest from "react-fcctest";
 
 function App() {
   return (
     <div className="App">
-      <ControlledInput/>
-
-      </div>
-    );
-  }
-
-
+      <ControlledInput />
+      <ReactFCCtest />
+    </div>
+  );
+}
 
 export default App;
