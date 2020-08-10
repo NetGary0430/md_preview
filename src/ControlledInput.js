@@ -5,8 +5,9 @@ let marked = require("marked");
 class ControlledInput extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      input: ""
+      input: defaultText
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -38,5 +39,22 @@ class ControlledInput extends React.Component {
     );
   }
 }
+
+var defaultText = `
+# H1
+
+## H2
+
+[Link](http://google.com)
+
+**Test**
+
+\`Inline code\` with backticks
+* List
+
+> Blockquote
+
+![React Logo](https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg)
+`;
 
 export default ControlledInput;
