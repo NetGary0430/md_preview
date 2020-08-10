@@ -24,9 +24,13 @@ class ControlledInput extends React.Component {
           id="editor"
           value={this.state.textAreaValue}
           onChange={this.handleChange}
-          rows={5}
-          cols={35}
-        />
+          rows={20}
+          cols={70}
+        >
+          # H1 [Link](http://google.com) ## H2 **Test** \`Inline code\` with
+          backticks * List > Blockquote ![React
+          Logo](https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg)
+        </textarea>
 
         <h4>Markdown Preview:</h4>
 
@@ -41,18 +45,19 @@ class ControlledInput extends React.Component {
 }
 
 var defaultText = `
-# H1
+# H1  
 
-## H2
+[Link](http://google.com)  
 
-[Link](http://google.com)
+## H2  
 
-**Test**
+**Test**  
 
-\`Inline code\` with backticks
-* List
+\`Inline code\` with backticks  
 
-> Blockquote
+* List  
+
+> Blockquote  
 
 ![React Logo](https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg)
 `;
