@@ -20,16 +20,8 @@ class ControlledInput extends React.Component {
   render() {
     return (
       <div>
-        <textarea
-          id="editor"
-          value={this.state.textAreaValue}
-          onChange={this.handleChange}
-          rows={20}
-          cols={70}
-        >
-          # H1 [Link](http://google.com) ## H2 **Test** \`Inline code\` with
-          backticks * List > Blockquote ![React
-          Logo](https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg)
+        <textarea id="editor" onChange={this.handleChange} rows={20} cols={70}>
+          {defaultText}
         </textarea>
 
         <h4>Markdown Preview:</h4>
@@ -45,20 +37,26 @@ class ControlledInput extends React.Component {
 }
 
 var defaultText = `
-# H1  
+# H1   
+## H2   
+[Link](http://google.com)   
+**Test**   
 
-[Link](http://google.com)  
+Heres some code, \`<div></div>\`, between 2 backticks.
 
-## H2  
+\`\`\`\`
+// this is multi-line code:
 
-**Test**  
+function anotherExample(firstLine, lastLine) {
+  if (firstLine == '\`\`\`' && lastLine == '\`\`\`') {
+    return multiLineCode;
+  }
+}
+\`\`\`\`
 
-\`Inline code\` with backticks  
 
-* List  
-
-> Blockquote  
-
+* List   
+> Blockquote   
 ![React Logo](https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg)
 `;
 
